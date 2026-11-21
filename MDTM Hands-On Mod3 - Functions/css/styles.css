@@ -1,0 +1,184 @@
+:root {
+    --cream: #fff8f0;
+    --pink: #f7c6c7;
+    --pink-soft: #fdeceb;
+    --rose: #b34d60;
+    --wine: #8b3038;
+    --brown: #49332b;
+    --line: #f0d5d0;
+    --green: #3f7d4e;
+    --green-bg: #e3f3e6;
+    --red-bg: #fde0e0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--brown);
+    margin: 0;
+    padding: 24px 16px;
+    line-height: 1.5;
+    background-image: url("../img/candy.png");
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+header {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--pink), #fbd9d3);
+    padding: 32px 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(139, 48, 56, 0.10);
+}
+
+header p {
+    margin: 4px 0 0;
+    color: var(--wine);
+    font-style: italic;
+}
+
+header hr { display: none; }
+
+.logo {
+    height: 44px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+nav {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--wine);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: var(--wine);
+    color: #fff;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    color: var(--wine);
+    margin: 0;
+}
+
+h2 {
+    color: var(--rose);
+    margin-top: 28px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--pink);
+    display: inline-block;
+}
+
+h3 {
+    color: #854b39;
+    margin-bottom: 4px;
+}
+
+main {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(73, 51, 43, 0.08);
+}
+
+p { line-height: 1.6; }
+
+li { padding: 5px; }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 22px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    color: var(--rose);
+    font-size: 0.9rem;
+}
+
+/* ---------- Stock control table (stock.php) ---------- */
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+table.stock {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+}
+
+table.stock th {
+    background-color: var(--pink);
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.78rem;
+    text-align: left;
+    padding: 14px 16px;
+    white-space: nowrap;
+}
+
+table.stock td {
+    padding: 14px 16px;
+    border-top: 1px solid var(--line);
+}
+
+table.stock tbody tr:nth-child(even) { background-color: var(--pink-soft); }
+table.stock tbody tr:hover { background-color: #fbe3e1; }
+
+table.stock .num { text-align: right; font-variant-numeric: tabular-nums; }
+table.stock th.num { text-align: right; }
+table.stock .name { font-weight: 600; color: var(--wine); }
+
+.badge {
+    display: inline-block;
+    min-width: 44px;
+    text-align: center;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge.yes { background: var(--red-bg); color: var(--wine); }
+.badge.no  { background: var(--green-bg); color: var(--green); }
+
+@media (max-width: 1150px) {
+    body { background-image: none; }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    main { padding: 20px; }
+    table.stock th, table.stock td { padding: 10px; }
+}
